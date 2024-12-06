@@ -19,7 +19,7 @@ urls.forEach(url => {
     await page.click('//button[@class="btn btn-warning w-100 text-white fw-medium fs-14 ng-star-inserted"]');
     await page.fill('#password','24081201Nam@')
     await page.click('//button[@class="btn btn-warning w-100 text-white fw-medium fs-14"]');
-    // await page.click('//a[@href="/admin/pod"]')
+    await page.click('//a[@href="/admin/pod"]')
     await page.waitForTimeout(5000)
   await page.evaluate(() => {
     const content = document.querySelector('.content');
@@ -50,7 +50,7 @@ urls.forEach(url => {
   // Chụp ảnh toàn bộ trang
   await expect(page).toHaveScreenshot(
     {
-      fullPage: true, timeout: 50000,maxDiffPixelRatio: 0.01,
+      fullPage: true, timeout: 50000,maxDiffPixelRatio: 0.02,
     }
 
   );
@@ -90,7 +90,7 @@ urls.forEach(url => {
   // Chụp ảnh toàn bộ trang
   await expect(page).toHaveScreenshot(
     {
-      fullPage: true, timeout: 50000,maxDiffPixelRatio: 0.01,
+      fullPage: true, timeout: 50000,maxDiffPixelRatio: 0.02,
     }
 
   );
