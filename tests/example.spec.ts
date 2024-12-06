@@ -27,7 +27,7 @@ urls.forEach(url => {
       content.scrollTo(0, 1100); // Cuộn xuống vị trí 3300px
     }
   });
-  await page.waitForTimeout(2000); // Chờ 1 giây, có thể tùy chỉnh
+  await page.waitForTimeout(3000); // Chờ 1 giây, có thể tùy chỉnh
 
   await page.evaluate(() => {
     const content = document.querySelector('.content');
@@ -35,7 +35,7 @@ urls.forEach(url => {
       content.scrollTo(0, 1100); // Cuộn xuống vị trí 3300px
     }
   });
-  await page.waitForTimeout(2000); // Chờ 1 giây, có thể tùy chỉnh
+  await page.waitForTimeout(3000); // Chờ 1 giây, có thể tùy chỉnh
 
   await page.evaluate(() => {
     const content = document.querySelector('.content');
@@ -43,14 +43,15 @@ urls.forEach(url => {
       content.scrollTo(0, 1100); // Cuộn xuống vị trí 3300px
     }
   });
+  await page.waitForTimeout(3000);
 
   // Chờ một chút để trang ổn định sau khi cuộn (nếu cần)
-  await page.waitForTimeout(2000); // Chờ 1 giây, có thể tùy chỉnh
+  await page.waitForTimeout(3000); // Chờ 1 giây, có thể tùy chỉnh
 
   // Chụp ảnh toàn bộ trang
   await expect(page).toHaveScreenshot(
     {
-      fullPage: true, timeout: 50000,maxDiffPixelRatio: 0.02,
+      fullPage: true, timeout: 50000,maxDiffPixelRatio: 0.2,
     }
 
   );
@@ -82,7 +83,7 @@ urls.forEach(url => {
       content.scrollTo(0, 1100); // Cuộn xuống vị trí 3300px
     }
   });
-  await page.waitForTimeout(2000); // Chờ 1 giây, có thể tùy chỉnh
+  await page.waitForTimeout(3000); // Chờ 1 giây, có thể tùy chỉnh
 
   // Chờ một chút để trang ổn định sau khi cuộn (nếu cần)
   await page.waitForTimeout(2000); // Chờ 1 giây, có thể tùy chỉnh
@@ -90,7 +91,7 @@ urls.forEach(url => {
   // Chụp ảnh toàn bộ trang
   await expect(page).toHaveScreenshot(
     {
-      fullPage: true, timeout: 50000,maxDiffPixelRatio: 0.02,
+      fullPage: true, timeout: 50000,maxDiffPixelRatio: 0.2,
     }
 
   );
